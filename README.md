@@ -4,6 +4,8 @@
 * ### 1단계 : 클래스를 활용하여 
 * ### 2단계 :   
 * ### 3단계 :
+![3월 15일 과제](https://user-images.githubusercontent.com/107795830/225227073-83b34431-3c52-4b6c-beca-a9a2860c3045.png)
+
 ### 1단계 java
 ```java
 class Accounting1 {
