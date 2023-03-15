@@ -83,7 +83,23 @@ public class AccountingApp2 {
 }
 ```
 * ### 3단계 : [클래스], [생성자], [인스턴스], [매개변수], [this], [메소드] 사용
-   * #### 1단계, 2단계와 비슷하지만 3단계에서는 
+   * #### 1단계, 2단계와 비슷하지만 3단계에서는 [생성자], [매개변수], [this]를 사용하여 더 가독성을 높였다.
+   * #### 생성자를 간략하게 설명하자면
+     - #### 생성자의 이름은 클래스 이름과 동일 하여야 한다.
+     - #### 생성자는 객체가 생성될 떄 자동으로 한번 호출 된다.
+     - #### 생성자는 매개변수 조건에 따라 여러개를 작성할 수 있다. (OverLoding)
+   * #### 2단계와는 다르게 괄호 안에 인자값을 전달한다.
+```java
+	Accounting3 a1 = new Accounting3(10000.0); 
+	Accounting3 a2 = new Accounting3(20000.0);
+```
+   * #### 생성자 정의
+```java
+public Accounting3(double valueOfSupply) {
+    this.valueOfSupply = valueOfSupply; 
+    // this.valueOfSupply는 class에 있는 변수를 의미하고, valueOfSupply는 인자값이다.
+}
+```
 ### 3단계 Java Code
 ```java
 class Accounting3 {
@@ -120,4 +136,4 @@ public class AccountingApp3 {
 }
 ```
 
-공부 자료 : https://opentutorials.org/course/4074/27018 (생활코딩)
+main 공부 자료 : https://opentutorials.org/course/4074/27018 (생활코딩)
