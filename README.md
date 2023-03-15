@@ -2,10 +2,12 @@
 
 ### 부가가치세를 계산해주는 프로그램인데 메소드, 클래스, 인스턴스를 활용하여 코드를 더 간소화 시키는걸 코드를 보고 살펴보면 된다.
 * ### 1단계 : [클래스], [메소드] 사용🍎
-   * #### 1. Accounting1[클래스]에서 valueOfSupply(공급가액)과  vatRate(부가가치세)를 선언하였다.
-   * #### 2. Accounting1[클래스]에서 부가가치세를 계산해서 main[메소드]로 반환 시켜주는 double type의 vatRate()[메소드]를 선언하였다.
-   * #### 3. Accounting1[클래스]에서 공급가액과 부가가치세 계산 결과를 main[메소드]로 반환 시켜주는 double type의 getTotal()[메소드]를 선언하였다.
-   * #### 4. AccountingApp1[클래스]에서 선언한 valueOfSupply을 main[메소드]에서 값을 넣고 출력을 한다. (클래스의 기능과 메소드의 기능을 활용하여 코드를 작성하긴 했지만, 가시성과 가독성이 떨어진다.)
+   * #### Accounting1[클래스]에서 valueOfSupply(공급가액)과  vatRate(부가가치세)를 선언하였다.
+   * #### Accounting1[클래스]에서 부가가치세를 계산해서 main[메소드]로 반환 시켜주는 double type의 vatRate()[메소드]를 선언하였다.
+   * #### Accounting1[클래스]에서 공급가액과 부가가치세 계산 결과를 main[메소드]로 반환 시켜주는 double type의 getTotal()[메소드]를 선언하였다.
+   * #### AccountingApp1[클래스]에서 선언한 valueOfSupply을 main[메소드]에서 값을 넣고 출력을 한다. 
+* #### 1단계의 단점(1) : 클래스의 기능과 메소드의 기능을 활용하여 코드를 작성하긴 했지만, 가시성과 가독성이 떨어진다.
+* #### 1단계의 단점(2) : 작업 할 때마다 값을 바꿔주어야 하는 아주 귀찮고, 또 버그를 유발하는 행위를 하여야 한다. 
    	
 ### 1단계 Java Code
 ```java
@@ -42,7 +44,10 @@ public class AccountingApp1 {
 }
 ```
 * ### 2단계 : [클래스], [인스턴스], [메소드] 사용 🍓
-   * #### 1. 1단계와 비슷하지만 2단계에서는 [인스턴스]변수를 생성하여 a1 인스턴스 
+   * #### 1단계와 비슷하지만 2단계에서는 [인스턴스]변수를 생성하여 코드를 더 간소화 시킨다. 
+   * #### AccountingApp2[클래스]의 main[메소드]에서 [인스턴스]를 생성하였는데 valueOfSupply와 getVAT()는 인스턴스에 소속된 변수이므로 Accounting2[클래스]에서 valueOfSupply를 1단계에서 'public static double valueOfSupply'라고 선언하였는데 static은 class의 소속 이므로 static을 지워 주어야 한다.(getVAT 또한 마찬가지다.)
+   * #### a1, a2 처럼 각자 독립적인 상태로 있기 때문에 1단계에서 값을 계속 바꿔주어야 한다는 불편함이 사라지고, [인스턴스]를 호출만 해주면 값을 가져올 수 있게 편하게 사용 할 수 있도록 작성하였다.
+
 ### 2단계 Java Code
 ```java
 class Accounting2 {
