@@ -135,5 +135,3 @@ public class AccountingApp3 {
 	}
 }
 ```
-
-main 공부 자료 : https://opentutorials.org/course/4074/27018 (생활코딩)
