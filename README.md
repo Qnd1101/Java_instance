@@ -6,9 +6,8 @@
    * #### 2. Accounting1[클래스]에서 부가가치세를 계산해서 main[메소드]로 반환 시켜주는 double type의 vatRate()[메소드]를 선언하였다.
    * #### 3. Accounting1[클래스]에서 공급가액과 부가가치세 계산 결과를 main[메소드]로 반환 시켜주는 double type의 getTotal()[메소드]를 선언하였다.
    * #### 4. AccountingApp1[클래스]에서 선언한 valueOfSupply을 main[메소드]에서 값을 넣고 출력을 한다. (클래스의 기능과 메소드의 기능을 활용하여 코드를 작성하긴 했지만, 가시성과 가독성이 떨어진다.)
-   
    	
-### 1단계 java
+### 1단계 Java Code
 ```java
 class Accounting1 {
 	public static double valueOfSupply;
@@ -42,7 +41,8 @@ public class AccountingApp1 {
 	}
 }
 ```
-* ### 2단계 : 
+* ### 2단계 : [클래스], [인스턴스], [메소드] 사용 🍓
+   * #### 1. 1단계와 비슷하지만 2단계에서는 [인스턴스]변수를 생성하여 a1 인스턴스 
 ### 2단계 Java Code
 ```java
 class Accounting2 {
@@ -77,7 +77,7 @@ public class AccountingApp2 {
 	}
 }
 ```
-* ### 3단계 :
+* ### 3단계 : [클래스], [생성자], [인스턴스], [매개변수], [this], [메소드] 사용
 
 ### 3단계 Java Code
 ```java
@@ -114,3 +114,5 @@ public class AccountingApp3 {
 	}
 }
 ```
+
+공부 자료 : https://opentutorials.org/course/4074/27018 (생활코딩)
