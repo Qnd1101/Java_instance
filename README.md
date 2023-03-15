@@ -1,16 +1,15 @@
 # 😮자바 인스턴스 활용
 
-### 부가가치세를 계산해주는 프로그램인데 복잡한 내용을 간소화 시켰다고 보면 된다.
-* ### 1단계 : 클래스를 활용하여 
-* ### 2단계 :   
-* ### 3단계 :
-![3월 15일 과제](https://user-images.githubusercontent.com/107795830/225227073-83b34431-3c52-4b6c-beca-a9a2860c3045.png)
+### 부가가치세를 계산해주는 프로그램인데 메소드, 클래스, 인스턴스를 활용하여 코드를 간소화 시켰다고 보면 된다.
+* ### 1단계 : [메소드], [클래스] 사용 : 클래스에서 valueOfSupply(공급가액)과  vatRate(부가가치세)를 선언하였고,
 
 ### 1단계 java
 ```java
 class Accounting1 {
 	public static double valueOfSupply;
+	// 공급가액
 	public static double vatRate = 0.1;
+	// 부가가치세율
 	public static double getVAT() {
 		return valueOfSupply * vatRate;
 	}
@@ -38,12 +37,14 @@ public class AccountingApp1 {
 	}
 }
 ```
-
-### 2단계
+* ### 2단계 : 
+### 2단계 Java Code
 ```java
 class Accounting2 {
 	public double valueOfSupply;
+	// 공급가액
 	public static double vatRate = 0.1;
+	// 부가가치세율
 	public double getVAT() {
 		return valueOfSupply * vatRate;
 	}
@@ -71,12 +72,15 @@ public class AccountingApp2 {
 	}
 }
 ```
+* ### 3단계 :
 
-### 3단계
+### 3단계 Java Code
 ```java
 class Accounting3 {
 	public double valueOfSupply;
+	// 공급가율
 	public static double vatRate = 0.1;
+	//
 	public Accounting3(double valueOfSupply) {
 		this.valueOfSupply = valueOfSupply;
 	}
