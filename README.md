@@ -45,29 +45,29 @@ public class AccountingApp1 {
 ```
 ### 2단계 : [클래스], [인스턴스], [메소드] 사용 🍓
   * #### 1단계와 비슷하지만 2단계에서는 [인스턴스]변수를 생성하여 코드를 더 간소화 시킨다. 
-  * #### AccountingApp2[클래스]의 main[메소드]에서 [인스턴스]를 생성하였는데 valueOfSupply와 getVAT()는 인스턴스에 소속된 변수이므로 Accounting2[클래스]에서 valueOfSupply를 1단계에서 'public static double valueOfSupply'라고 선언하였는데 static은 class의 소속 이므로 static을 지워 주어야 한다.(getVAT 또한 마찬가지다.)
+  * #### AccountingApp2[클래스]의 main[메소드]에서 [인스턴스]를 생성하였는데 valueOfSupply와 getVAT()는 인스턴스에 소속된 변수이므로 Accounting2[클래스]에서 valueOfSupply를 1단계에서 'public static double valueOfSupply'라고 선언하였는데 static은 class의 소속 이므로 static을 지워 주어야 한다.(getVAT, getTotal 또한 마찬가지다.)
   * #### a1, a2 처럼 각자 독립적인 상태로 있기 때문에 1단계에서 값을 계속 바꿔주어야 한다는 불편함이 사라지고, [인스턴스]를 호출만 해주면 값을 가져올 수 있게 편하게 사용 할 수 있도록 작성하였다.
 
 ### 2단계 Java Code
 ```java
 class Accounting2 {
-	public double valueOfSupply;
+	public double valueOfSupply;	// 인스턴스에 소속된 변수이므로 static을 지워 주어야 함
 	// 공급가액
 	public static double vatRate = 0.1;
 	// 부가가치세율
-	public double getVAT() {
-		return valueOfSupply * vatRate;
+	public double getVAT() {	// 인스턴스에 소속된 변수이므로 static을 지워 주어야 함
+		return valueOfSupply * vatRate; 
 	}
-	public double getTotal() {
+	public double getTotal() {	// 인스턴스에 소속된 변수이므로 static을 지워 주어야 함
 		return valueOfSupply + getVAT();
 	}
 }
 public class AccountingApp2 {
 	public static void main(String[] args) {
-		Accounting2 a1 = new Accounting2();
+		Accounting2 a1 = new Accounting2();  // 인스턴스 생성
 		a1.valueOfSupply = 10000.0;
 		
-		Accounting2 a2 = new Accounting2();
+		Accounting2 a2 = new Accounting2();  // 인스턴스 생성
 		a2.valueOfSupply = 20000.0;
 		
 		System.out.println("Value of supply : " + a1.valueOfSupply);
